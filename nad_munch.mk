@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2023 The NusantaraProject-ROM
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,13 +8,13 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common lineage stuff.
-$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
+# Inherit some common NusantaraProject-ROM stuff.
+$(call inherit-product, vendor/nusantara/config/common_full_phone.mk)
 
 # Inherit from munch device
 $(call inherit-product, device/xiaomi/munch/device.mk)
 
-PRODUCT_NAME := cherish_munch
+PRODUCT_NAME := nad_munch
 PRODUCT_DEVICE := munch
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -22,18 +22,18 @@ PRODUCT_MODEL := POCO F4
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# Bootanimation Resolution
-TARGET_BOOT_ANIMATION_RES := 1080
+# Inherit tags
+NAD_BUILD_TYPE := OFFICIAL
 
-# Inherit some props from Cherish
-CHERISH_BUILD_TYPE := OFFICIAL
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.cherish.maintainer=HDzungx
+# Inherit Pixel Charging
+USE_PIXEL_CHARGING := true
+
+# Ihenrit Bootanimation reso
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Inherit some common device props
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_CALL_RECORDING := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_BUILD_WITH_LTO := true
 
 BUILD_FINGERPRINT := Redmi/munch/munch:13/RKQ1.211001.001/V14.0.2.0.TLMMIXM:user/release-keys

@@ -40,6 +40,9 @@
         Z
     </string>
 
+    <!-- Whether usage of the proximity sensor during doze is supported -->
+    <bool name="doze_proximity_sensor_supported">false</bool>
+
     <!--  ID for the camera that needs extra protection -->
     <string translatable="false" name="config_protectedCameraId">1</string>
 
