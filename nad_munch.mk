@@ -16,6 +16,7 @@ $(call inherit-product, device/xiaomi/munch/device.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_INCLUDE_MATLOG := true
 USE_GAPPS := true
 USE_AOSP_CLOCK := true
 USE_PIXEL_CHARGING := true
