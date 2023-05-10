@@ -17,10 +17,9 @@ $(call inherit-product, device/xiaomi/munch/device.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_INCLUDE_MATLOG := true
-USE_GAPPS := true
 USE_AOSP_CLOCK := true
 USE_PIXEL_CHARGING := true
-
+TARGET_BUILD_WITH_LTO := true
 NAD_BUILD_TYPE := OFFICIAL
 
 PRODUCT_NAME := nad_munch
